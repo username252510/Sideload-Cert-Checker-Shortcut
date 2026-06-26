@@ -24,7 +24,7 @@ Before setting up the shortcut, ensure you have these ready:
 * The certificate files you want to use (your `.p12` file, its password, and your `.mobileprovision` file).
 
 ### 📥 Step 1: Download the Shortcut
-Choose **one** of the links above to add the utility to your Shortcuts app. Use the iCloud link if you dont know which to use.
+Choose **one** of the links above to add the utility to your Shortcuts app. Either just tap on the iCloud link and it should automatically open the Shortcuts app (recommended), or download the .shortcut file, open the downloads folder in the files app, and then tap on the downloaded file and it should open the Shortcuts app.
 
 ### ⚙️ Step 2: Configure Import Questions
 When installing the shortcut, iOS should prompt you with **Import Questions** to import your certificates.
@@ -37,7 +37,10 @@ When installing the shortcut, iOS should prompt you with **Import Questions** to
 Once setup is complete, run the shortcut to test it.
 
 1. Tap on the shortcut name "Con's Certificate Checker V_"
-2. In a few seconds it should return a popup with your certifcate status.
+2. In a few seconds it should return a formatted popup with your certifcate status.
 
-Double check that "🔗Valid Pair: Yes:". If it says No it means that you have accidently imported `.p12` and `.mobileprovision` files that aren't associated with eachother. Hold down on the shortcut from the main menu on the shortcut library, and press edit. From here your chosen certificate files should be right there. You can hold down on the blue chosen file (making sure not to accidently drag the file action box), press clear to remove it, and tap on the blue "file" button, and re-import your certificate files. Make sure that you import your `.p12` file on the top box and your `.mobileprovision` on the box under it.
+* Double check that "🔗Valid Pair: Yes:". If it says No it means that you have accidently imported `.p12` and `.mobileprovision` files that aren't associated with eachother.
+* If it says anything along the lines of "Invalid P12 password" or "Could not evaluate the key path." this means that the password that you entered is incorrect.
+
+If you run into any problems the easiest and most straightforward way to fix it is literally just deleting the shortcut and re-installing it, and making sure you set it up correctly. If you are absolutely certain that you set it up correctly, and the shortcut gets stuck right as it is trying to connect to the FlareStore API and eventually times out after not being able to connect to it, this most likely means that the API is temporarily offline, or you just have an unstable internet cnnection. 
 
